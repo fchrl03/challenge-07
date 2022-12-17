@@ -57,9 +57,7 @@ function FuncHeader() {
               </a>
             </Menu.Item>
           </Menu>
-          <Button className="text-white" color="success">
-            Register
-          </Button>
+          <Button className="text-white bg-limegreenlight outline-none border-none">Register</Button>
         </Navbar.End>
       </Navbar>
     </div>

@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button } from 'react-daisyui';
-import { FuncHeader, FuncFooter } from './sections';
+import { FuncHeader, FuncFooter, Jumbotron } from '../sections';
 
-function App() {
+function Homepage() {
   return (
     <div>
-      <FuncHeader />
+      <div className="bg-lightblue">
+        <FuncHeader />
+        <Jumbotron />
+      </div>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <Button color="primary">Click me!</Button>
       <FuncFooter />
@@ -13,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Homepage;
