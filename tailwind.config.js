@@ -11,6 +11,8 @@ module.exports = {
       limegreen: '#3D7B3F',
       lightblue: '#F1F3FF',
       limegreenlight: '#5CB85F',
+      yellowcard: '#F9CC00',
+      whitedark: '#FFFFFF',
     },
     extend: {},
   },

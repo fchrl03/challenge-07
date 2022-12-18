@@ -1,5 +1,5 @@
 import React from 'react';
-import { FuncHeader, FuncFooter, Jumbotron, Ourservices } from '../sections';
+import { FuncHeader, FuncFooter, Jumbotron, Ourservices, Whyus } from '../sections';
 
 function Homepage() {
   return (
@@ -9,6 +9,11 @@ function Homepage() {
         <Jumbotron />
       </div>
       <Ourservices />
+      <div className="mt-10 px-10">
+        <h1 className="font-bold text-2xl">Why Us?</h1>
+        <p className="text-sm">Mengapa harus pilih Binar Car Rental?</p>
+        <Whyus />
+      </div>
       <FuncFooter />
     </div>
   );
