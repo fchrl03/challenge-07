@@ -30,7 +30,7 @@ function FuncFooter() {
 
         <div>
           <p className="text-blackdark">Connect with us</p>
-          <div className="flex flex-col gap-2.5 sm:flex-row">
+          <div className="flex gap-2.5">
             <div className="p-2.5 rounded-full bg-darkblue">
               <a className="text-white" href="/">
                 <FaFacebookF />

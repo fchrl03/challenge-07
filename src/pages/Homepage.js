@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from 'react-daisyui';
-import { FuncHeader, FuncFooter, Jumbotron } from '../sections';
+import { FuncHeader, FuncFooter, Jumbotron, Ourservices } from '../sections';
 
 function Homepage() {
   return (
@@ -9,8 +8,7 @@ function Homepage() {
         <FuncHeader />
         <Jumbotron />
       </div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Button color="primary">Click me!</Button>
+      <Ourservices />
       <FuncFooter />
     </div>
   );
