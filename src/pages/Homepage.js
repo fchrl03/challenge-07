@@ -10,12 +10,12 @@ function Homepage() {
         <Jumbotron />
       </div>
       <Ourservices />
-      <div className="mt-10 px-10">
+      <div className="mt-10 px-10" id="why-us">
         <h1 className="font-bold text-2xl">Why Us?</h1>
         <p className="text-sm">Mengapa harus pilih Binar Car Rental?</p>
         <Whyus />
       </div>
-      <div className="my-[10rem]">
+      <div className="mb-[10rem] mt-[6rem]" id="testimonial">
         <h1 className="text-2xl font-bold text-center">Testimonial</h1>
         <p className="text-sm mt-[0.75rem] mb-[2.5rem] text-center">Berbagai review positif dari para pelanggan kami</p>
         <Testimonial />
@@ -26,12 +26,12 @@ function Homepage() {
           <p className="text-sm text-white text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <Button href="/#" className="bg-limegreenlight mt-8 outline-none border-none font-bold text-sm text-white w-[140px] normal-case">
+          <Button href="/search" className="bg-limegreenlight mt-8 outline-none border-none font-bold text-sm text-white w-[140px] normal-case">
             Mulai Sewa Mobil
           </Button>
         </div>
       </div>
-      <div className="px-10 my-[7rem]">
+      <div className="px-10 my-[7rem]" id="faq">
         <Faq />
       </div>
       <FuncFooter />

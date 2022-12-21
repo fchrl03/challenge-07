@@ -4,7 +4,7 @@ import { BiCheck } from 'react-icons/bi';
 
 function Ourservices() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mt-15">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-15" id="our-services">
       <div className="flex items-center justify-center p-10 lg:p-20">
         <img src={ImgService} className="w-full" alt="" />
       </div>

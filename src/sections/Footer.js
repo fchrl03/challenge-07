@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from 'react-daisyui';
 import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaTwitch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function FuncFooter() {
   return (
@@ -14,47 +15,47 @@ function FuncFooter() {
           <p className="text-blackdark">081-233-334-808</p>
         </div>
         <div>
-          <a href="/" className="link text-blackdark link-hover">
+          <Link to="/" className="link text-blackdark link-hover">
             Our services
-          </a>
-          <a href="/" className="link text-blackdark link-hover">
+          </Link>
+          <Link to="/" className="link text-blackdark link-hover">
             Why Us
-          </a>
-          <a href="/" className="link text-blackdark link-hover">
+          </Link>
+          <Link to="/" className="link text-blackdark link-hover">
             Testimonial
-          </a>
-          <a href="/" className="link text-blackdark link-hover">
+          </Link>
+          <Link to="/" className="link text-blackdark link-hover">
             FAQ
-          </a>
+          </Link>
         </div>
 
         <div>
           <p className="text-blackdark">Connect with us</p>
           <div className="flex gap-2.5">
             <div className="p-2.5 rounded-full bg-darkblue">
-              <a className="text-white" href="/">
+              <Link className="text-white" to="/">
                 <FaFacebookF />
-              </a>
+              </Link>
             </div>
             <div className="p-2.5 rounded-full bg-darkblue">
-              <a className="text-white" href="/">
+              <Link className="text-white" to="/">
                 <FaInstagram />
-              </a>
+              </Link>
             </div>
             <div className="p-2.5 rounded-full bg-darkblue">
-              <a className="text-white" href="/">
+              <Link className="text-white" to="/">
                 <FaTwitter />
-              </a>
+              </Link>
             </div>
             <div className="p-2.5 rounded-full bg-darkblue">
-              <a className="text-white" href="/">
+              <Link className="text-white" to="/">
                 <FaEnvelope />
-              </a>
+              </Link>
             </div>
             <div className="p-2.5 rounded-full bg-darkblue">
-              <a className="text-white" href="/">
+              <Link className="text-white" to="/">
                 <FaTwitch />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
