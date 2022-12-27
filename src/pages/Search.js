@@ -1,6 +1,6 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../slices/CarSlice';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { increment, decrement } from '../slices/CarSlice';
 import { FuncFooter, FuncHeader, Jumbotron } from '../sections';
 import { Button } from 'react-daisyui';
 import axios from 'axios';
@@ -11,9 +11,9 @@ export default function Search() {
   const [driver, setDriver] = React.useState('');
   const [date, setDate] = React.useState('');
   const [pick, setPick] = React.useState('');
-  const [capacity, setCapacity] = React.useState('');
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  const [capacityState, setCapacity] = React.useState('');
+  // const count = useSelector((state) => state.counter.value);
+  // const dispatch = useDispatch();
 
   React.useEffect(() => {
     const getCarsData = async () => {
@@ -51,47 +51,24 @@ export default function Search() {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-
-    const exist = carState.find((item) => {
-      return e.id === item.id;
-    });
-
-    if (exist && capacity !== '' && driver === 'Sopir') {
-      setCarState(carState.map((item) => <div key={item.id}>{item.id === e.id ? { ...exist } : item}</div>));
-    } else {
-      setCarState((s) => [...s, { ...e }]);
+    try {
+      // function filterCar() {
+      // if (capacityState === '' && driver === 'Sopir' && pick === '') {
+      //   return carState.filter((car) => car.available === true && car.availableAt <= date);
+      // } else if (capacityState !== '' && driver === 'Sopir' && pick === '') {
+      //   return carState.filter((car) => car.available === true && car.availableAt <= date && car.capacity >= capacityState);
+      // } else if (capacityState === '' && driver === 'Tsopir' && pick === '') {
+      //   return carState.filter((car) => car.available === false && car.availableAt <= date);
+      // } else if (capacityState !== '' && driver === 'Tsopir' && pick === '') {
+      //   carState.filter((car) => car.available === false && car.capacity >= capacityState && car.availableAt <= date);
+      // }
+      // }
+      const filteredCars = carState.map((car) => ({ ...car })).filter((car) => car.available === true && car.availableAt <= date && car.capacity >= capacityState);
+      setCarState(filteredCars);
+      e.target.reset();
+    } catch (err) {
+      console.log(err);
     }
-    // try {
-    //   const cars = await axios.get('https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json');
-
-    //   const filterCar = () => {
-    //     if (capacity === '' && driver === 'Sopir' && pick === '') {
-    //       return cars.data.filter((car) => car.available === true && car.availableAt <= date);
-    //     } else if (capacity !== '' && driver === 'Sopir') {
-    //       return cars.data.filter((car) => car.available === true && car.availableAt <= date && car.capacity >= capacity);
-    //     } else if (capacity === '' && driver === 'Tsopir') {
-    //       return cars.data.filter((car) => car.available === false && car.availableAt <= date);
-    //     } else if (capacity !== '' && driver === 'Tsopir') {
-    //       return cars.data.filter((car) => car.available === false && car.capacity >= capacity && car.availableAt <= date);
-    //     }
-    //   };
-
-    //   function filterCar() {
-    //     if (capacity === '' && driver === 'Sopir' && pick === '') {
-    //       return carState.filter((car) => car.available === true && car.availableAt <= date);
-    //     } else if (capacity !== '' && driver === 'Sopir') {
-    //       return carState.filter((car) => car.available === true && car.availableAt <= date && car.capacity >= capacity);
-    //     } else if (capacity === '' && driver === 'Tsopir') {
-    //       return carState.filter((car) => car.available === false && car.availableAt <= date);
-    //     } else if (capacity !== '' && driver === 'Tsopir') {
-    //       carState.filter((car) => car.available === false && car.capacity >= capacity && car.availableAt <= date);
-    //     }
-    //   }
-    e.target.reset();
-    //   setCarState([filterCar()]);
-    // } catch (err) {
-    //   console.log(err);
-    // }
   };
 
   return (
@@ -134,7 +111,7 @@ export default function Search() {
       <div className="px-10">
         <CarList cars={carState} />
       </div>
-      <div>
+      {/* <div>
         <button aria-label="Increment value" onClick={() => dispatch(increment())}>
           Increment
         </button>
@@ -142,7 +119,7 @@ export default function Search() {
         <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
           Decrement
         </button>
-      </div>
+      </div> */}
       <FuncFooter />
     </div>
   );
