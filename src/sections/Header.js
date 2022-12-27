@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Navbar, Dropdown, Menu } from 'react-daisyui';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function FuncHeader() {
   return (
@@ -15,47 +15,47 @@ function FuncHeader() {
             </Button>
             <Dropdown.Menu tabIndex={0} className="w-52 menu-compact mt-3">
               <Dropdown.Item>
-                <Link to="/#our-services">Our Services</Link>
+                <a href="/#our-services">Our Services</a>
               </Dropdown.Item>
               <Dropdown.Item>
-                <Link to="/#why-us">Why Us</Link>
+                <a href="/#why-us">Why Us</a>
               </Dropdown.Item>
               <Dropdown.Item>
-                <Link to="/#testimonial">Testimonial</Link>
+                <a href="/#testimonial">Testimonial</a>
               </Dropdown.Item>
               <Dropdown.Item>
-                <Link to="/#faq">FAQ</Link>
+                <a href="/#faq">FAQ</a>
               </Dropdown.Item>
               <Dropdown.Item>
                 <Button color="success">Register</Button>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Link to="/" className="btn btn-ghost normal-case text-xl font-bold">
+          <a href="/" className="btn btn-ghost normal-case text-xl font-bold">
             BCR
-          </Link>
+          </a>
         </Navbar.Start>
         <Navbar.End className="hidden lg:flex">
           <Menu horizontal className="p-0">
             <Menu.Item>
-              <Link className="font-semibold" to="/#our-services">
+              <a className="font-semibold" href="/#our-services">
                 Our Services
-              </Link>
+              </a>
             </Menu.Item>
             <Menu.Item>
-              <Link className="font-semibold" to="/#why-us">
+              <a className="font-semibold" href="/#why-us">
                 Why Us
-              </Link>
+              </a>
             </Menu.Item>
             <Menu.Item>
-              <Link className="font-semibold" to="/#testimonial">
+              <a className="font-semibold" href="/#testimonial">
                 Testimonial
-              </Link>
+              </a>
             </Menu.Item>
             <Menu.Item>
-              <Link className="font-semibold" to="/#faq">
+              <a className="font-semibold" href="/#faq">
                 FAQ
-              </Link>
+              </a>
             </Menu.Item>
           </Menu>
           <Button className="text-white bg-limegreenlight outline-none border-none">Register</Button>

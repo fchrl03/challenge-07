@@ -63,7 +63,7 @@ export default function Search() {
       //   carState.filter((car) => car.available === false && car.capacity >= capacityState && car.availableAt <= date);
       // }
       // }
-      const filteredCars = carState.map((car) => ({ ...car })).filter((car) => car.available === true && car.availableAt <= date && car.capacity >= capacityState);
+      const filteredCars = carState.map((car) => ({ ...car })).filter((car) => driver && pick && car.available === true && car.availableAt <= date && car.capacity >= capacityState);
       setCarState(filteredCars);
       e.target.reset();
     } catch (err) {
@@ -81,7 +81,7 @@ export default function Search() {
         <div className="grid grid-cols-5 gap-5 px-10 py-6 m-10 bg-slate-100 shadow-md rounded-lg ">
           <div className="flex flex-col gap-3">
             <label>Tipe Driver</label>
-            <select onChange={(e) => driverEventHandler(e)} required>
+            <select className="p-3 border-none rounded-lg outline-none" onChange={(e) => driverEventHandler(e)} required>
               <option value="" disabled>
                 Pilih Tipe Driver
               </option>
